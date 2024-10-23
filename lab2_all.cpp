@@ -1,10 +1,9 @@
-//лаба 2 задание 1
 #include <iostream>
 #include <vector>
 #include <deque>
 #include <list>
-
-int main(){
+//лаба 2 задание 1
+int zad1(){
     std::vector<int> V{1, 2, 4};
     V.front() *= 2;
     V.at((int)(V.size() / 2)) *= 2;
@@ -19,10 +18,7 @@ int main(){
     std::cout << D.front() << std::endl;
     std::cout << D.at((int)(V.size() / 2))<< std::endl;
     std::cout << D.back() << std::endl;
-    std::list<int> L{16, 20, 24};
-    L.front() *= 2;
-    L.back() *= 2;
-    std::cout << L.front() << std::endl;
-    std::cout << L[middle_index]<< std::endl;
-    std::cout << L.back() << std::endl;
+}
+int main(){
+    
 }
