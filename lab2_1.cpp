@@ -10,12 +10,7 @@ int input(int a, std::string str = "Введите размер контейне
 
 int main() {
     setlocale(LC_ALL, "Russian");
-    int x = 1;
-    std::cout << "Введите номер задачи" << std:: endl;
-    std::cin >> x;
-    switch (x) {
-        case 1:
-        std::vector<int> V;
+    std::vector<int> V;
     short unsigned int l, n;
     l = input(l,"Введите кол-во элементов вектора ");
     if (l-3 <0 or l%2 == 0){
@@ -48,24 +43,24 @@ int main() {
     std::cout << D.front() << std::endl;
     std::cout << D.at((int)(D.size() / 2))<< std::endl;
     std::cout << D.back() << std::endl;
-     std::list<int> L;
+    std::list<int> L;
     short unsigned int r, m;
-    r = input(r,"Введите кол-во элементов дека ");
+    r = input(r,"Введите кол-во элементов вектора ");
     if (r-3 <0 or r%2 == 0){
         std::cout << "число элементов не больше 3х или четно";
         return -1;}
     else{
     for (int i {0}; i < r; i++){
-        m = input(m,"Введите элемент дека ");
+        m = input(m,"Введите элемент вектора");
         L.push_back(m);}}
     L.front() *= 2;
     L.back() *= 2;
-    for (int n : L.size()/2)
-        std::cout << n << "\t";
-    std::cout << std::endl;
+    int j = 1;
+    j=L.size()/2;
     std::cout << L.front() << std::endl;
-    
+    std::list<int>::iterator it = L.begin();
+    std::advance(it, j);
+    int a = *it;
+    std::cout << a*2 << std::endl;
     std::cout << L.back() << std::endl;
-   
     }
-}
