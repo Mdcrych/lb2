@@ -3,6 +3,7 @@
 #include <algorithm>
 
 int main() {
+    setlocale(LC_ALL, "Russian");
     std::list<int> L1 = {1, 2, 3, 4, 5, 6, 7, 8};
     std::list<int> L2 = {1, 2, 3, 4, 5, 6, 7, 8};
 
@@ -17,13 +18,13 @@ int main() {
     std::reverse(mid2, L2.end());
 
     // Output the modified lists
-    std::cout << "L1 after inverting first half: ";
+    std::cout << "L1 с инвертированной половиной: ";
     for (const auto& elem : L1) {
         std::cout << elem << " ";
     }
     std::cout << std::endl;
 
-    std::cout << "L2 after inverting second half: ";
+    std::cout << "L2 с инвертированной половиной: ";
     for (const auto& elem : L2) {
         std::cout << elem << " ";
     }
