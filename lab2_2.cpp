@@ -9,6 +9,7 @@ int input(int a, std::string str = "Введите размер контейне
 }
 
 int main() {
+    setlocale(LC_ALL, "Russian");
     std::list<int> L;
     short unsigned int r, m;
     r = input(r,"Введите кол-во элементов вектора ");
