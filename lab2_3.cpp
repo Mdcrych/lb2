@@ -20,16 +20,14 @@ int main(){
     else{
     std::cout << "число элементов не кратно 4";
         return -1;}
-    int n = D.size()/2;
-    std::cout<<n<<std::endl;
-    std::deque<int>::iterator i = D.begin();
-    std::advance(i, n);
-    while(i !=D.begin()){
-        if(*i%2==0){
-        D.erase(i);
-        i--;}
-        else{
-            i--;}
-        }
-    std::copy(D.begin(), D.end(), std::ostream_iterator<char>(std::cout," "));
+    int N = D.size();
+    auto i = D.begin();
+    for (int j = 0; j < N/4; ++j) {
+        i = D.erase(++i);
     }
+    std::cout << "Результат после удаления элементов с четными порядковыми номерами в первой половине:" << std::endl;
+    for (int num : D) {
+        std::cout << num << " ";
+    }
+    return 0;
+}
