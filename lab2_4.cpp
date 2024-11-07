@@ -4,14 +4,24 @@
 #include <algorithm>
 #include <fstream>
 
-int main() {
-setlocale "russian";
-std::string name = "output.txt";
-std::vector<int> numbers = {5, 0, 8, 0, 3};
+int input(int a, std::string str = "Введите размер контейнера: ") {
+  std::cout << str;
+  std::cin >> a;
+  return a;
+}
 
+int main() {
+  setlocale(LC_ALL, "Russian");
+std::string name = "output.txt";
+std::vector<int> numbers;
+short unsigned int l, n;
+l = input(l,"Введите кол-во элементов вектора ");
+for (int i {0}; i < l; i++){
+    n = input(n,"Введите элемент вектора ");
+    numbers.push_back(n);}
 std::ofstream outputFile(name);
 if (!outputFile.is_open()) {
-    std::cerr << "Error opening file " << name << std::endl;
+    std::cerr << "ошибка в открытии файла " << name << std::endl;
     return 1;
 }
 
@@ -19,6 +29,6 @@ std::replace_copy(numbers.begin(), numbers.end(), std::ostream_iterator<int>(out
 
 outputFile.close();
 
-std::cout << "Numbers have been written to " << name << std::endl;
+std::cout << "Числа записаны в " << name << std::endl;
 
 return 0;}
