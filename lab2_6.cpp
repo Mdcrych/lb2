@@ -13,15 +13,23 @@ int main() {
     std::list<int>L1;
     short unsigned int r1, m1;
     r1 = input(r1,"Введите кол-во элементов первого вектора: ");
+    if (r1%4!=0){
+        std::cout << "число элементов не кратно 4";
+        return -1;}
+    else{
     for (int i {0}; i < r1; i++){
         m1 = input(m1,"Введите элемент вектора: ");
-        L1.push_back(m1);}
+        L1.push_back(m1);}}
     std::list<int>L2;
     short unsigned int r2, m2;
     r2 = input(r2,"Введите кол-во элементов второго вектора: ");
+    if (r2%4!=0){
+        std::cout << "число элементов не кратно 4";
+        return -1;}
+    else{
     for (int j {0}; j < r2; j++){
         m2 = input(m2,"Введите элемент вектора: ");
-        L2.push_back(m2);}
+        L2.push_back(m2);}}
 
     auto mid1 = L1.begin();
     std::advance(mid1, L1.size() / 2);
