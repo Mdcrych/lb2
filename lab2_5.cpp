@@ -10,6 +10,7 @@ int input(int a, std::string str = "Введите размер контейне
 }
 
 int main() {
+setlocale(LC_ALL, "Russian");
 int K;
 std::cout << "введите K: ";
 std::cin >> K;
