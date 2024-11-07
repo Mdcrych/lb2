@@ -11,6 +11,7 @@ public:
 };
 
 int main() {
+    setlocale(LC_ALL, "Russian");
     std::vector<int> L = {1, 3, 4, 6};
     std::vector<double> V;
 
