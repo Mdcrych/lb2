@@ -4,6 +4,7 @@
 #include <algorithm>
 
 int main() {
+    setlocale(LC_ALL, "Russian");
     std::vector<std::string> V = {"APPLE", "ORANGE", "GRAPE", "LEMON", "PEAR", "PEACH"};
 
     std::multimap<char, std::string> M;
