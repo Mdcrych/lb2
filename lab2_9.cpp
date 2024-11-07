@@ -5,6 +5,7 @@
 #include <set>
 
 int main() {
+setlocale(LC_ALL, "Russian");
 std::vector<int>V0 = {1, 2, 3};
 int N = 3;
 std::vector<std::vector<int>> V = {
